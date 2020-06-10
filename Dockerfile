@@ -1,13 +1,11 @@
-FROM debian:buster
+FROM tillhoff/debian
 
-LABEL maintainer="info@enforge.de"
-
-### update os
-RUN apt-get update && \
-apt-get upgrade -y && \
-apt-get autoremove -y && \
-apt-get clean -y && \
-rm -rf /tmp/* /var/tmp/* /var/cache/apt/* /var/cache/distfiles/*
+### install software
+RUN apt-get install -y
+  dnsmasq
+  
+### configure software
+COPY dnsmasq.conf /etc/dnsmasq.conf
 
 ### startup command
 CMD cd /example; /bin/bash run.sh
