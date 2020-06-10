@@ -1,7 +1,7 @@
 FROM tillhoff/debian
 
 ### install software
-RUN apt-get install -y
+RUN apt-get install -y \
   dnsmasq
   
 ### configure software
