@@ -8,4 +8,4 @@ RUN apt-get install -y
 COPY dnsmasq.conf /etc/dnsmasq.conf
 
 ### startup command
-CMD cd /example; /bin/bash run.sh
+CMD dnsmasq -C /etc/dnsmasq.conf --no-daemon
