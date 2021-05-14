@@ -1,3 +1,5 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/tillhoff/containered-dns/Publish%20image%20to%20docker%20hub)
+
 # containered dns
 DNS in a container, based on dnsmasq.
 
