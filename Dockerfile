@@ -1,4 +1,4 @@
-FROM tillhoff/debian
+FROM thetillhoff/debian
 
 ### install software
 RUN apt-get install -y \
